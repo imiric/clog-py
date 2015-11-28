@@ -1,0 +1,2 @@
+include versioneer.py
+include clog_client/_version.py
