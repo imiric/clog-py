@@ -10,6 +10,16 @@ class ClogRequestWarning(Warning):
 
 
 def log(data, metadata={}):
+    """Create a log event on the Clog server
+
+    Args:
+        data (str): primary log event data
+        metadata (dict): optional metadata about the event
+
+    Returns:
+        class:`requests.Response` instance
+
+    """
     payload = {'log': {'data': data, 'metadata': metadata},
                'source': Config.source}
     try:
